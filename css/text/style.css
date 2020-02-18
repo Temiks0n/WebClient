@@ -1,0 +1,23 @@
+body {
+    background: rgb(252, 238, 217);
+}
+
+h1 {
+    color: rgb(103, 101, 101);
+    font-weight: lighter;
+}
+
+.type-info {
+    color: rgb(78, 140, 174);
+    font-weight: bold;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.info {
+    color: rgb(103, 101, 101);
+    font-weight: normal;
+    text-indent: 10px
+}
