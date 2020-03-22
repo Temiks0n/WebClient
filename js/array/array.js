@@ -1,5 +1,7 @@
 function sortArray(array) {
-    return array.sort((a, b) => b - a);
+    return array.sort(function (a, b) {
+        return b - a;
+    });
 }
 
 function getFirstFiveElements(array) {
@@ -7,12 +9,17 @@ function getFirstFiveElements(array) {
 }
 
 function getLastFiveElements(array) {
-    return array.slice(0, 5);
+    return array.slice(array.length - 5);
 }
 
 function getSumEvenElements(array) {
-    return array.filter((number) => number % 2 === 0)
-        .reduce((a, b) => a + b);
+    return array
+        .filter(function (number) {
+            return (number % 2) === 0;
+        })
+        .reduce(function (a, b) {
+            return a + b;
+        }, 0);
 }
 
 function createArray(length) {
@@ -25,20 +32,30 @@ function createArray(length) {
     return list;
 }
 
-function powArray(list) {
-    return list.map((number) => Math.pow(number, 2));
+function calculatePowEvenNumbers(number) {
+    return number
+        .filter(function (number) {
+            return (number % 2) === 0;
+        })
+        .map(function (number) {
+            return Math.pow(number, 2);
+        });
 }
 
-var array1 = [6, 25, 72, 4, 2, 56, 23, 3, 6, 94, 23];
+function main() {
+    var array1 = [6, 25, 72, 4, 2, 56, 23, 3, 6, 94, 23];
 
-var arraySorted = sortArray(array1);
+    var arraySorted = sortArray(array1);
 
-console.log(arraySorted);
-console.log(getFirstFiveElements(arraySorted));
-console.log(getLastFiveElements(arraySorted));
-console.log(getSumEvenElements(arraySorted));
+    console.log("Отсортированный массив: " + arraySorted);
+    console.log("Первые пять элементов, отсортированного массива: ", getFirstFiveElements(arraySorted));
+    console.log("Последние пять элементов, отсортированного массива: ", getLastFiveElements(arraySorted));
+    console.log("Сумма четных чисел, отсортированного массива: ",  getSumEvenElements(arraySorted));
 
-var array2 = createArray(100);
+    var array2 = createArray(100);
 
-console.log(array2);
-console.log(powArray(array2));
+    console.log("Созданный массив от 1 до 100: ", array2);
+    console.log("Возведения в квадра четных чисел, в созданном массиве: ",  calculatePowEvenNumbers(array2));
+}
+
+main();

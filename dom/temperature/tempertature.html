@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h4 class="temperature-header">Мера температуры</h4>
+<div class="temperature">
+    <div>
+        <label>
+            <input id="temperature-input-value" type="number" value=0/>
+        </label>
+    </div>
+    <button class="button-convert" type="button" name="convert">=</button>
+    <div>
+        <select class="temperature-measure" id="temperature-output-measure">
+            <option value="far">Градус Фаренгейта</option>
+            <option value="kel">Кельвин</option>
+        </select>
+        <label>
+            <input id="temperature-output-value" disabled/>
+        </label>
+    </div>
+</div>
+<script src="celsia.js"></script>
+</body>
+</html>

@@ -1,15 +1,20 @@
-body {
-    background: rgb(252, 238, 217);
+.web-development {
+    background: #fdeed5;
+    font-family: "Arial";
+    text-align: left;
+    width: 100%;
+    margin: 10px;
 }
 
-h1 {
-    color: rgb(103, 101, 101);
+.introduction {
+    color: #636769;
     font-weight: lighter;
 }
 
 .type-info {
-    color: rgb(78, 140, 174);
+    color: #458bac;
     font-weight: bold;
+    padding-top: 8px;
 }
 
 .strikethrough {
@@ -17,7 +22,8 @@ h1 {
 }
 
 .info {
-    color: rgb(103, 101, 101);
+    color: #857e76;
     font-weight: normal;
-    text-indent: 10px
+    padding-top: 10px;
+    text-indent: 15px
 }

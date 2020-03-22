@@ -1,0 +1,32 @@
+.temperature-header {
+    font-family: "Galvji";
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+#temperature-input-value {
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+#temperature-output-value {
+    border-color: gray;
+}
+
+.temperature-measure {
+    background: #c4c5c8;
+    font-family: "Galvji";
+    font-size: 80%;
+    text-align: left;
+    margin: 20px;
+}
+
+.button-convert {
+    background: #c4c5c8;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 150px;
+    width: 66px;
+    height: 21px;
+}
