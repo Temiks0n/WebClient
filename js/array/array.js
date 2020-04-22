@@ -57,3 +57,7 @@ function calculatePowEvenNumbers(number) {
     console.log("Созданный массив от 1 до 100: ", array2);
     console.log("Возведения в квадра четных чисел, в созданном массиве: ", calculatePowEvenNumbers(array2));
 }());
+
+function fNew() {
+    console.log("new text");
+}
