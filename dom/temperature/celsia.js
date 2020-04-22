@@ -60,15 +60,13 @@ function convertEvent() {
 var isExceptionNaN = false;
 
 function main() {
-    getButton("button-convert")
-        .addEventListener("click", () => convertEvent());
+    getButton("button-convert").addEventListener("click", () => convertEvent());
 
-    document
-        .addEventListener("keypress", function (e) {
-            if (e.key === 'Enter') {
-                convertEvent();
-            }
-        });
+    document.addEventListener("keypress", function (e) {
+        if (e.key === 'Enter') {
+            convertEvent();
+        }
+    });
 }
 
 main();

@@ -42,20 +42,18 @@ function calculatePowEvenNumbers(number) {
         });
 }
 
-function main() {
+(function () {
     var array1 = [6, 25, 72, 4, 2, 56, 23, 3, 6, 94, 23];
 
-    var arraySorted = sortArray(array1);
+    var sortedArray = sortArray(array1);
 
-    console.log("Отсортированный массив: " + arraySorted);
-    console.log("Первые пять элементов, отсортированного массива: ", getFirstFiveElements(arraySorted));
-    console.log("Последние пять элементов, отсортированного массива: ", getLastFiveElements(arraySorted));
-    console.log("Сумма четных чисел, отсортированного массива: ",  getSumEvenElements(arraySorted));
+    console.log("Отсортированный массив: " + sortedArray);
+    console.log("Первые пять элементов, отсортированного массива: ", getFirstFiveElements(sortedArray));
+    console.log("Последние пять элементов, отсортированного массива: ", getLastFiveElements(sortedArray));
+    console.log("Сумма четных чисел, отсортированного массива: ", getSumEvenElements(sortedArray));
 
     var array2 = createArray(100);
 
     console.log("Созданный массив от 1 до 100: ", array2);
-    console.log("Возведения в квадра четных чисел, в созданном массиве: ",  calculatePowEvenNumbers(array2));
-}
-
-main();
+    console.log("Возведения в квадра четных чисел, в созданном массиве: ", calculatePowEvenNumbers(array2));
+}());

@@ -1,19 +1,23 @@
 function getCountriesWithMaxCountCities(countries) {
-    var list = null;
-    var count = 0;
+    var list = [];
 
-    countries.forEach(function (country) {
-        if (country.cities.length > count) {
-            count = country.cities.length;
-            list = [];
-        }
-
-        if (country.cities.length === count) {
-            list.push(country.name)
-        }
-    });
+    countries.filter(function (country) {
+        return country.cities.length === getMaxCountCities(countries);
+    })
+        .forEach(function (country) {
+            list.push(country.name);
+        });
 
     return list;
+}
+
+function getMaxCountCities(countries) {
+    return countries.reduce(function (maxCount, country) {
+        if (country.cities.length > maxCount) {
+            maxCount = country.cities.length;
+        }
+        return maxCount
+    }, 0);
 }
 
 function getCountriesWithTotalPopulations(countries) {
@@ -29,24 +33,24 @@ function getCountriesWithTotalPopulations(countries) {
     return countriesTotalPopulation;
 }
 
-function main() {
+(function () {
     var countries = [
         {
             name: "Russia",
             cities: [
-                moscow = {
+                {
                     name: "Moscow",
                     population: 12692466
                 },
-                stPetersburg = {
+                {
                     name: "Saint-Petersburg",
                     population: 5392992
                 },
-                novosibirsk = {
+                {
                     name: "Novosibirsk",
                     population: 1618039
                 },
-                yekaterinburg = {
+                {
                     name: "Yekaterinburg",
                     population: 1483119
                 }
@@ -55,15 +59,15 @@ function main() {
         {
             name: "China",
             cities: [
-                beijing = {
+                {
                     name: "Beijing",
                     population: 21150000
                 },
-                shanghai = {
+                {
                     name: "Shanghai",
                     population: 24150000
                 },
-                chungking = {
+                {
                     name: "Chungking",
                     population: 30165000
                 }
@@ -72,23 +76,22 @@ function main() {
         {
             name: "Germany",
             cities: [
-                berlin = {
+                {
                     name: "Berlin",
                     population: 3520031
                 },
-                hamburg = {
+                {
                     name: "Hamburg",
                     population: 1787408
                 },
-                munich = {
+                {
                     name: "Munich",
                     population: 1450381
                 }
             ]
-        }];
+        }
+    ];
 
     console.log("Страны в массиве с максимальной численностью городов: ", getCountriesWithMaxCountCities(countries));
     console.log("Общее количество населения стран из массива: ", getCountriesWithTotalPopulations(countries));
-}
-
-main();
+}());
